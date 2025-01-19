@@ -1,0 +1,7 @@
+demo/Process.class
+demo/LaunchMessage.class
+demo/CrashMessage.class
+demo/PutMessage.class
+demo/GetMessage.class
+demo/RobustKeyValue.class
+demo/ValueResponse.class
