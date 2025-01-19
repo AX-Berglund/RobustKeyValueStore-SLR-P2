@@ -1,0 +1,98 @@
+# Maven-specific
+/target/
+*.log
+*.gz
+*.iml
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse-specific
+/.settings/
+/.metadata/
+/.classpath
+/.project
+/.recommenders
+
+# IntelliJ IDEA-specific
+/.idea/
+*.iws
+*.ipr
+*.iml
+/out/
+
+# NetBeans-specific
+/nbproject/private/
+/build/
+/dist/
+
+# VS Code-specific
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+*~
+# Compiled class files
+*.class
+
+# Generated files
+dependency-reduced-pom.xml
+mvnw
+mvnw.cmd
+# Maven-specific
+/target/
+*.log
+*.gz
+*.iml
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse-specific
+/.settings/
+/.metadata/
+/.classpath
+/.project
+/.recommenders
+
+# IntelliJ IDEA-specific
+/.idea/
+*.iws
+*.ipr
+*.iml
+/out/
+
+# NetBeans-specific
+/nbproject/private/
+/build/
+/dist/
+
+# VS Code-specific
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+*~
+# Compiled class files
+*.class
+
+# Generated files
+dependency-reduced-pom.xml
+mvnw
+mvnw.cmd
