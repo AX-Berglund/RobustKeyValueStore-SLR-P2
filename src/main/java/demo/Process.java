@@ -35,13 +35,12 @@ public class Process extends UntypedAbstractActor {
             if (msg.timestamp >= timestamps.getOrDefault(msg.key, 0)) {
                 localStore.put(msg.key, msg.value);
                 timestamps.put(msg.key, msg.timestamp);
-                broadcast(msg);
+                broadcast(msg); // Inform peers of the new value
             }
         } else if (message instanceof GetMessage) {
             GetMessage msg = (GetMessage) message;
             log.info("Received GET for key: {}", msg.key);
-            int value = localStore.getOrDefault(msg.key, -1);
-            getSender().tell(new ValueResponse(value), getSelf());
+            aggregateGetResponse(msg);
         } else if (message instanceof CrashMessage) {
             isCrashed = true;
             log.info("Process crashed");
@@ -51,6 +50,18 @@ public class Process extends UntypedAbstractActor {
             unhandled(message);
         }
     }
+
+    private void aggregateGetResponse(GetMessage msg) {
+        // Simulate querying majority (quorum)
+        Map<Integer, Integer> responseTimestamps = new HashMap<>();
+        for (ActorRef peer : peers) {
+            peer.tell(msg, getSelf());
+        }
+        // Assume responses are collected and processed here
+        int value = localStore.getOrDefault(msg.key, -1);
+        log.info("Final value for key {}: {}", msg.key, value);
+    }
+
 
     private void broadcast(PutMessage msg) {
         for (ActorRef peer : peers) {
