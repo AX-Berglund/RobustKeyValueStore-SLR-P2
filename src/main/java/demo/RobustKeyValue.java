@@ -1,35 +1,53 @@
-package demo; 
+package demo;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
-import akka.actor.Props;
-import java.util.*;
 
 public class RobustKeyValue {
     public static void main(String[] args) {
-        final ActorSystem system = ActorSystem.create("KeyValueStoreSystem");
-        int N = 5; // Number of processes
-        List<ActorRef> processes = new ArrayList<>();
+        
+        final ActorSystem system = ActorSystem.create("System");
+        int N = 5;
+        int f = 1; // up to 1 crash => f < N/2 is satisfied for N=5
 
+        
+        // We'll do a separate list for the final references
+        List<ActorRef> actors = new ArrayList<>();
+
+        // We'll first create them with an empty list
         for (int i = 0; i < N; i++) {
-            processes.add(system.actorOf(Process.createActor(processes), "process-" + i));
+            actors.add(system.actorOf(Process.createActor(new ArrayList<>()), "process-" + i));
+        }
+        // Now we have all actors. We'll pass that same list to each constructor via a special "InitPeersMessage" 
+        // So we do an init message:
+        for (ActorRef ref : actors) {
+            ref.tell(new InitPeersMessage(actors), ActorRef.noSender());
         }
 
-        // Perform operations. the arguments of PutMessage are key, value, timestamp
-        processes.get(0).tell(new PutMessage(1, 100, 1), ActorRef.noSender());
-        processes.get(1).tell(new GetMessage(1), ActorRef.noSender());
-
-        // Crash and relaunch simulation
-        Random random = new Random();
-        for (int i = 0; i < N / 2; i++) {
-            int crashIdx = random.nextInt(N);
-            processes.get(crashIdx).tell(new CrashMessage(), ActorRef.noSender());
+        // Now we can proceed with the random crashing. Let's shuffle the list and pick the first f processes to crash:
+        List<Integer> indices = new ArrayList<>();
+        for (int i = 0; i < N; i++) {
+            indices.add(i);
+        }
+        Collections.shuffle(indices, new Random());
+        for (int i = 0; i < f; i++) {
+            int crashIdx = indices.get(i);
+            actors.get(crashIdx).tell(new CrashMessage(), ActorRef.noSender());
         }
 
-        for (ActorRef process : processes) {
-            process.tell(new LaunchMessage(), ActorRef.noSender());
+        // The rest are correct (greater than f) => send them a LaunchMessage
+        for (int i = f; i < N; i++) {
+            int idx = indices.get(i);
+            actors.get(idx).tell(new LaunchMessage(), ActorRef.noSender());
+            break;
         }
 
+        // Let them run for some time
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
@@ -37,5 +55,13 @@ public class RobustKeyValue {
         } finally {
             system.terminate();
         }
+    }
+}
+
+// A helper message so each Process can be re-initialized with the final peer list
+class InitPeersMessage {
+    public final List<ActorRef> peers;
+    public InitPeersMessage(List<ActorRef> peers) {
+        this.peers = peers;
     }
 }
