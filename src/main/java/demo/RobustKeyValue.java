@@ -44,7 +44,6 @@ public class RobustKeyValue {
         for (int i = f; i < N; i++) {
             int idx = indices.get(i);
             actors.get(idx).tell(new LaunchMessage(), ActorRef.noSender());
-            break;
         }
 
         // Let them run for some time

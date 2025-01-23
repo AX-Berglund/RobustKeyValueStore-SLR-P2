@@ -127,6 +127,7 @@ public class Process extends AbstractActor {
     private void onReadPhaseRequest(ReadPhaseRequest req) {
         if (isCrashed) return;
         // Send back our local state
+        log.info("{} Invoce read request on {}", getSender().path().name(), getSelf().path().name());
         getSender().tell(new ReadPhaseResponse(req.seqNum, localTS, localValue), getSelf());
     }
 
@@ -189,7 +190,7 @@ public class Process extends AbstractActor {
             // operation done
             long elapsed = System.currentTimeMillis() - currentOp.startTime;
             if (currentOp.type == Operation.Type.PUT) {
-                log.info("Process {} completed PUT(value={}) in {} ms", processName, currentOp.maxValue, elapsed);
+                log.info("{} completed PUT(value={}) in {} ms", processName, currentOp.maxValue, elapsed);
                 doNextPut();
             } else {
                 int val = currentOp.maxValue;
@@ -220,7 +221,7 @@ public class Process extends AbstractActor {
             getCount++;
             startGet();
         } else {
-            log.info("Process {} finished all operations ({} puts, {} gets).", processName, M, M);
+            log.info("{} finished all operations ({} puts, {} gets).", processName, M, M);
         }
     }
 
@@ -239,9 +240,11 @@ public class Process extends AbstractActor {
         op.responseCount = 0;
         currentOp = op;
 
-        log.info("Process {} starts PUT(value={}) [seq={}]...", processName, value, seqCounter);
+        log.info("{} starts PUT(value={}) [seq={}]", processName, value, seqCounter);
         // read phase
         ReadPhaseRequest rreq = new ReadPhaseRequest(seqCounter);
+
+        // Ask to see all actors value
         for (ActorRef p : peers) {
             p.tell(rreq, getSelf());
         }
@@ -256,7 +259,7 @@ public class Process extends AbstractActor {
         op.responseCount = 0;
         currentOp = op;
 
-        log.info("Process {} starts GET [seq={}]...", processName, seqCounter);
+        log.info("{} starts GET [seq={}]", processName, seqCounter);
         // read phase
         ReadPhaseRequest rreq = new ReadPhaseRequest(seqCounter);
         for (ActorRef p : peers) {
