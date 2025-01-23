@@ -4,14 +4,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 
 public class RobustKeyValue {
+
     public static void main(String[] args) {
         
         final ActorSystem system = ActorSystem.create("System");
+
         int N = 5;
         int f = 1; // up to 1 crash => f < N/2 is satisfied for N=5
 
@@ -44,6 +47,13 @@ public class RobustKeyValue {
         for (int i = f; i < N; i++) {
             int idx = indices.get(i);
             actors.get(idx).tell(new LaunchMessage(), ActorRef.noSender());
+            
+            try {
+                TimeUnit.SECONDS.sleep(15); 
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt(); 
+            }
+            break;
         }
 
         // Let them run for some time

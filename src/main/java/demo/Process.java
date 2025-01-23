@@ -55,9 +55,11 @@ public class Process extends AbstractActor {
     private final String processName;
 
     // For the sequential M puts + M gets scenario
-    private static final int M = 3;
+    private static final int M = 1;
     private int putCount = 0;
     private int getCount = 0;
+
+
 
     public Process(List<ActorRef> initialPeers) {
         // We'll set peers after we get an InitPeersMessage, 
@@ -75,7 +77,7 @@ public class Process extends AbstractActor {
 
     @Override
     public void postStop() {
-        log.info("Process {} shutting down.", processName);
+        log.info("{} shutting down.", processName);
     }
 
     @Override
@@ -84,11 +86,11 @@ public class Process extends AbstractActor {
             .match(InitPeersMessage.class, this::onInitPeers)
             .match(CrashMessage.class, msg -> {
                 isCrashed = true;
-                log.info("Process {} crashed!", processName);
+                log.info("{} crashed!", processName);
             })
             .match(LaunchMessage.class, msg -> {
                 if (!isCrashed) {
-                    log.info("Process {} launching. Will do {} puts and {} gets...", processName, M, M);
+                    log.info("{} launching. Will do {} puts and {} gets...", processName, M, M);
                     putCount = 0;
                     getCount = 0;
                     doNextPut(); // start the first put
@@ -102,12 +104,12 @@ public class Process extends AbstractActor {
             // Optionally handle old style PutMessage/GetMessage if needed:
             .match(GetMessage.class, msg -> {
                 if (!isCrashed) {
-                    log.info("Ignoring direct GetMessage at process {}, we use ABD phases", processName);
+                    log.info("Ignoring direct GetMessage at {}, we use ABD phases", processName);
                 }
             })
             .match(PutMessage.class, msg -> {
                 if (!isCrashed) {
-                    log.info("Ignoring direct PutMessage at process {}, we use ABD phases", processName);
+                    log.info("Ignoring direct PutMessage at {}, we use ABD phases", processName);
                 }
             })
             .build();
@@ -117,7 +119,7 @@ public class Process extends AbstractActor {
         this.peers = msg.peers;
         this.N = peers.size();
         this.quorumSize = (N / 2) + 1;
-        log.info("Process {} initialized with N={} peers, quorum={}", processName, N, quorumSize);
+        log.info(" {} initialized with N={} peers, quorum={}", processName, N, quorumSize);
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -127,16 +129,27 @@ public class Process extends AbstractActor {
     private void onReadPhaseRequest(ReadPhaseRequest req) {
         if (isCrashed) return;
         // Send back our local state
-        log.info("{} Invoce read request on {}", getSender().path().name(), getSelf().path().name());
+        log.info("{} Invoke read request on {}", getSender().path().name(), getSelf().path().name());
         getSender().tell(new ReadPhaseResponse(req.seqNum, localTS, localValue), getSelf());
     }
 
     private void onReadPhaseResponse(ReadPhaseResponse resp) {
         if (isCrashed) return;
-        if (currentOp == null) return;
-        if (resp.seqNum != currentOp.seqNum) return;
+        
+        
+        // Check if there's an ongoing operation
+        if (currentOp == null) {
+            log.warning("{}: Received unexpected ReadPhaseResponse (seqNum={})",
+                    processName, resp.seqNum);
+            return;
+        }
 
+        
+       // Update regardless of seqNum (both PUT and GET operations can receive responses)
         currentOp.responseCount++;
+
+
+
         if (resp.ts > currentOp.maxTS) {
             currentOp.maxTS = resp.ts;
             currentOp.maxValue = resp.value;
@@ -145,13 +158,16 @@ public class Process extends AbstractActor {
         }
 
         if (currentOp.responseCount >= currentOp.needed) {
-            // time to do write phase
+            // time to write
             int newTS;
             int newValue;
             if (currentOp.type == Operation.Type.PUT) {
+                log.info("Now we are in put");
                 newTS = currentOp.maxTS + 1;
                 newValue = currentOp.requestedValue;
             } else {
+                log.info("Now we are in get");
+
                 newTS = currentOp.maxTS;
                 newValue = currentOp.maxValue;
             }
@@ -194,10 +210,9 @@ public class Process extends AbstractActor {
                 doNextPut();
             } else {
                 int val = currentOp.maxValue;
-                log.info("Process {} completed GET => value={} in {} ms", processName, val, elapsed);
-                doNextGetDone(val);
+                log.info("{} got GET from {} => value={} in {} ms", getSender().path().name(), processName, val, elapsed);
+                // doNextGetDone(val);
             }
-            currentOp = null;
         }
     }
 
@@ -211,6 +226,7 @@ public class Process extends AbstractActor {
             putCount++;
             startPut(valueToPut);
         } else {
+            currentOp=null;
             // done with puts => do gets
             doNextGet();
         }
@@ -244,20 +260,23 @@ public class Process extends AbstractActor {
         // read phase
         ReadPhaseRequest rreq = new ReadPhaseRequest(seqCounter);
 
-        // Ask to see all actors value
+        // Send ReadPhaseRequest to all actors
         for (ActorRef p : peers) {
             p.tell(rreq, getSelf());
         }
     }
 
     private void startGet() {
+        // log.info("First we have {}", currentOp.type);
         seqCounter++;
-        Operation op = new Operation(Operation.Type.GET, seqCounter, quorumSize);
-        op.startTime = System.currentTimeMillis();
-        op.maxTS = 0;
-        op.maxValue = 0;
-        op.responseCount = 0;
-        currentOp = op;
+        Operation op2 = new Operation(Operation.Type.GET, seqCounter, quorumSize);
+        op2.startTime = System.currentTimeMillis();
+        op2.maxTS = 0;
+        op2.maxValue = 0;
+        op2.responseCount = 0;
+        currentOp = op2;
+        log.info("Then we have {}", currentOp.type);
+
 
         log.info("{} starts GET [seq={}]", processName, seqCounter);
         // read phase
