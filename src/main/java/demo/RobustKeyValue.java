@@ -53,7 +53,6 @@ public class RobustKeyValue {
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt(); 
             }
-            break;
         }
 
         // Let them run for some time

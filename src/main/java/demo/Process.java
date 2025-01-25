@@ -55,7 +55,7 @@ public class Process extends AbstractActor {
     private final String processName;
 
     // For the sequential M puts + M gets scenario
-    private static final int M = 1;
+    private static final int M = 3;
     private int putCount = 0;
     private int getCount = 0;
 
@@ -211,6 +211,7 @@ public class Process extends AbstractActor {
             } else {
                 int val = currentOp.maxValue;
                 log.info("{} got GET from {} => value={} in {} ms", getSender().path().name(), processName, val, elapsed);
+                doNextGet();
                 // doNextGetDone(val);
             }
         }
@@ -241,10 +242,6 @@ public class Process extends AbstractActor {
         }
     }
 
-    private void doNextGetDone(int readVal) {
-        // we might do something with readVal
-        doNextGet();
-    }
 
     private void startPut(int value) {
         seqCounter++;
