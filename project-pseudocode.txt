@@ -1,0 +1,30 @@
+ST2DISC - Distributed Algoritms: project
+pseudocode
+Our multi-writer multi-reader atomic register implementation (a variant of
+ABD [1]) is described in Algorithm 1.
+To write a new value v, a writer increments its local sequence number r,
+sends a read request [?, r] to all the processes, waits for the responses of the type
+[v′, t′, r] from a majority (> n/2) of the processes (we also say a quorum). Then
+it picks up the highest timestamp tmax in the set of received responses, computes
+its new timestamp as t = tmax + 1 and sends a write request [v, t] to all the pro-
+cesses in the system. The operation completes as soon as responses of the type
+[ack, v, t] are received from a quorum.
+To read the register value, a reader increments its sequence number r and
+sends a read request [?, r] to every all the processes. As soon as responses of
+the type [v′, t′, r] are received from a quorum, the operation selects the value
+vm equipped with the highest timestamp tm. If there are multiple different val-
+ues written with timestamp tm, the largest such value is chosen. To make sure
+that subsequent read operations will not “miss” the returned value, the reader
+then sends a write request [vm, tm], waits until a quorum confirms it by sending
+[ack, vm, tm], and only then returns v.
+Notice that, as multiple values can be written with the same timestamp, the
+value is attached to the acknowledgement sent to a write request. This is needed
+to ensure that the acknowledgement is indeed sent to this write request and not
+to an earlier write request with the same timestamp but a different value (this
+could happen if the operation is concurrent with multiple writes using the same
+timestamp. An alternative solution is to maintain an additional sequence number
+attached to every write request a process issues.
+References
+[1] H. Attiya, A. Bar-Noy, and D. Dolev. Sharing memory robustly in message
+passing systems. J. ACM, 42(2):124–142, Jan. 1995.
+
