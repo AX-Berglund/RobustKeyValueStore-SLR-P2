@@ -31,6 +31,7 @@ public class Process extends AbstractActor {
     // Sequence number for the next read/write operation we initiate
     private int seqCounter = 0;
 
+
     private Operation currentOp = null; 
 
     private static class Operation {
@@ -38,15 +39,21 @@ public class Process extends AbstractActor {
         public Type type;
         public int seqNum;
         public int requestedValue; 
+        public boolean maxReadResponseFlag;
+        public boolean maxWriteResponseFlag;
         public int maxTS;         
         public int maxValue;      
         public int responseCount; 
         public int needed;        
         public long startTime;    
-        public Operation(Type type, int seqNum, int needed) {
+        public Operation(Type type, int seqNum, int needed, boolean maxReadResponseFlag,boolean maxWriteResponseFlag) {
             this.type = type;
             this.seqNum = seqNum;
             this.needed = needed;
+            this.maxReadResponseFlag = maxReadResponseFlag;
+            this.maxWriteResponseFlag = maxWriteResponseFlag;
+
+
         }
     }
 
@@ -86,11 +93,11 @@ public class Process extends AbstractActor {
             .match(InitPeersMessage.class, this::onInitPeers)
             .match(CrashMessage.class, msg -> {
                 isCrashed = true;
-                log.info("{} crashed!", processName);
+                log.info("[Process-{}] [Crash] Will not react to further messages.", processId);
             })
             .match(LaunchMessage.class, msg -> {
                 if (!isCrashed) {
-                    log.info("{} launching. Will do {} puts and {} gets...", processName, M, M);
+                    log.info("[Process-{}] [Launch] Process launching with {} PUTs and {} GETs.", processId, M, M);
                     putCount = 0;
                     getCount = 0;
                     doNextPut(); // start the first put
@@ -100,18 +107,6 @@ public class Process extends AbstractActor {
             .match(ReadPhaseResponse.class, this::onReadPhaseResponse)
             .match(WritePhaseRequest.class, this::onWritePhaseRequest)
             .match(WritePhaseAck.class, this::onWritePhaseAck)
-
-            // Optionally handle old style PutMessage/GetMessage if needed:
-            .match(GetMessage.class, msg -> {
-                if (!isCrashed) {
-                    log.info("Ignoring direct GetMessage at {}, we use ABD phases", processName);
-                }
-            })
-            .match(PutMessage.class, msg -> {
-                if (!isCrashed) {
-                    log.info("Ignoring direct PutMessage at {}, we use ABD phases", processName);
-                }
-            })
             .build();
     }
 
@@ -119,7 +114,7 @@ public class Process extends AbstractActor {
         this.peers = msg.peers;
         this.N = peers.size();
         this.quorumSize = (N / 2) + 1;
-        log.info(" {} initialized with N={} peers, quorum={}", processName, N, quorumSize);
+        log.info("[Process-{}] [Init] Initialized with N={} peers, quorum={}", processId, N, quorumSize);
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -128,8 +123,9 @@ public class Process extends AbstractActor {
 
     private void onReadPhaseRequest(ReadPhaseRequest req) {
         if (isCrashed) return;
+
         // Send back our local state
-        log.info("{} Invoke read request on {}", getSender().path().name(), getSelf().path().name());
+        
         getSender().tell(new ReadPhaseResponse(req.seqNum, localTS, localValue), getSelf());
     }
 
@@ -144,11 +140,19 @@ public class Process extends AbstractActor {
             return;
         }
 
+        if (currentOp.maxReadResponseFlag){
+            return;
+        }
+
+        if (currentOp.responseCount >= currentOp.needed){return;}
+
+
+        log.info("[{}] [ReadPhaseRequest] Received read request from {} with seq={}.",
+            getSender().path().name(), processName, resp.seqNum);
+
         
        // Update regardless of seqNum (both PUT and GET operations can receive responses)
         currentOp.responseCount++;
-
-
 
         if (resp.ts > currentOp.maxTS) {
             currentOp.maxTS = resp.ts;
@@ -162,29 +166,30 @@ public class Process extends AbstractActor {
             int newTS;
             int newValue;
             if (currentOp.type == Operation.Type.PUT) {
-                log.info("Now we are in put");
                 newTS = currentOp.maxTS + 1;
                 newValue = currentOp.requestedValue;
+
+                currentOp.maxTS = newTS;
+                currentOp.maxValue = newValue;
+                currentOp.responseCount = 0;
+                currentOp.maxReadResponseFlag = true;
+
+                log.info("[Process-{}] [Quorum] Sending write requests to peers", processId);
+
+                WritePhaseRequest wreq = new WritePhaseRequest(currentOp.seqNum, newTS, newValue);
+                for (ActorRef p : peers) {
+                    p.tell(wreq, getSelf());
+                }
             } else {
-                log.info("Now we are in get");
+                log.info("[Process-{}] [Quorum] Majority reads", processId);
 
-                newTS = currentOp.maxTS;
-                newValue = currentOp.maxValue;
-            }
-
-            currentOp.maxTS = newTS;
-            currentOp.maxValue = newValue;
-            currentOp.responseCount = 0;
-
-            WritePhaseRequest wreq = new WritePhaseRequest(currentOp.seqNum, newTS, newValue);
-            for (ActorRef p : peers) {
-                p.tell(wreq, getSelf());
             }
         }
     }
 
     private void onWritePhaseRequest(WritePhaseRequest req) {
         if (isCrashed) return;
+
         // adopt the new ts,value if it is bigger
         if (req.ts > localTS) {
             localTS = req.ts;
@@ -192,25 +197,31 @@ public class Process extends AbstractActor {
         } else if (req.ts == localTS && req.value > localValue) {
             localValue = req.value;
         }
+
         // ack
-        getSender().tell(new WritePhaseAck(req.seqNum, req.ts, req.value), getSelf());
+        getSender().tell(new WritePhaseAck(req.seqNum, localTS, localValue), getSelf());
     }
 
     private void onWritePhaseAck(WritePhaseAck ack) {
         if (isCrashed) return;
         if (currentOp == null) return;
         if (ack.seqNum != currentOp.seqNum) return;
+        if (currentOp.maxWriteResponseFlag) return;
+
+        log.info("[Process-{}] [ACK] Updated local state to value={} with timestamp={}.",
+              getSender().path().name(), ack.value, ack.ts);
 
         currentOp.responseCount++;
         if (currentOp.responseCount >= currentOp.needed) {
+            currentOp.maxWriteResponseFlag = true;
             // operation done
             long elapsed = System.currentTimeMillis() - currentOp.startTime;
             if (currentOp.type == Operation.Type.PUT) {
-                log.info("{} completed PUT(value={}) in {} ms", processName, currentOp.maxValue, elapsed);
+                log.info("[Process-{}] [PUT-{}] Completed PUT(value={}) in {} ms.", processId, seqCounter, ack.value, elapsed);
                 doNextPut();
             } else {
                 int val = currentOp.maxValue;
-                log.info("{} got GET from {} => value={} in {} ms", getSender().path().name(), processName, val, elapsed);
+                log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, val, elapsed);
                 doNextGet();
                 // doNextGetDone(val);
             }
@@ -238,6 +249,7 @@ public class Process extends AbstractActor {
             getCount++;
             startGet();
         } else {
+            
             log.info("{} finished all operations ({} puts, {} gets).", processName, M, M);
         }
     }
@@ -245,7 +257,7 @@ public class Process extends AbstractActor {
 
     private void startPut(int value) {
         seqCounter++;
-        Operation op = new Operation(Operation.Type.PUT, seqCounter, quorumSize);
+        Operation op = new Operation(Operation.Type.PUT, seqCounter, quorumSize, false, false);
         op.requestedValue = value;
         op.startTime = System.currentTimeMillis();
         op.maxTS = 0;
@@ -253,7 +265,7 @@ public class Process extends AbstractActor {
         op.responseCount = 0;
         currentOp = op;
 
-        log.info("{} starts PUT(value={}) [seq={}]", processName, value, seqCounter);
+        log.info("[Process-{}] [PUT-{}] Starting PUT(value={}) [seq={}].", processId, seqCounter, value, seqCounter);
         // read phase
         ReadPhaseRequest rreq = new ReadPhaseRequest(seqCounter);
 
@@ -266,18 +278,19 @@ public class Process extends AbstractActor {
     private void startGet() {
         // log.info("First we have {}", currentOp.type);
         seqCounter++;
-        Operation op2 = new Operation(Operation.Type.GET, seqCounter, quorumSize);
+        Operation op2 = new Operation(Operation.Type.GET, seqCounter, quorumSize, false, false);
         op2.startTime = System.currentTimeMillis();
         op2.maxTS = 0;
         op2.maxValue = 0;
         op2.responseCount = 0;
         currentOp = op2;
-        log.info("Then we have {}", currentOp.type);
 
 
-        log.info("{} starts GET [seq={}]", processName, seqCounter);
+        log.info("[Process-{}] [GET-{}] Starting GET [seq={}].", processId, seqCounter, seqCounter);
+
         // read phase
         ReadPhaseRequest rreq = new ReadPhaseRequest(seqCounter);
+
         for (ActorRef p : peers) {
             p.tell(rreq, getSelf());
         }
