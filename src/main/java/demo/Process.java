@@ -181,7 +181,11 @@ public class Process extends AbstractActor {
                     p.tell(wreq, getSelf());
                 }
             } else {
+                long elapsed = System.currentTimeMillis() - currentOp.startTime;
                 log.info("[Process-{}] [Quorum] Majority reads", processId);
+                log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, resp.value, elapsed);
+                currentOp.maxReadResponseFlag = true;
+                doNextGet();
 
             }
         }
@@ -204,25 +208,32 @@ public class Process extends AbstractActor {
 
     private void onWritePhaseAck(WritePhaseAck ack) {
         if (isCrashed) return;
+        
         if (currentOp == null) return;
-        if (ack.seqNum != currentOp.seqNum) return;
-        if (currentOp.maxWriteResponseFlag) return;
 
-        log.info("[Process-{}] [ACK] Updated local state to value={} with timestamp={}.",
+        if (ack.seqNum != currentOp.seqNum) return;
+
+
+        log.info("[{}] [ACK] Updated local state to value={} with timestamp={}.",
               getSender().path().name(), ack.value, ack.ts);
+
 
         currentOp.responseCount++;
         if (currentOp.responseCount >= currentOp.needed) {
-            currentOp.maxWriteResponseFlag = true;
             // operation done
             long elapsed = System.currentTimeMillis() - currentOp.startTime;
             if (currentOp.type == Operation.Type.PUT) {
                 log.info("[Process-{}] [PUT-{}] Completed PUT(value={}) in {} ms.", processId, seqCounter, ack.value, elapsed);
                 doNextPut();
+                currentOp.responseCount = 0;
+
             } else {
                 int val = currentOp.maxValue;
                 log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, val, elapsed);
+                currentOp.responseCount = 0;
                 doNextGet();
+                
+
                 // doNextGetDone(val);
             }
         }
