@@ -181,11 +181,21 @@ public class Process extends AbstractActor {
                     p.tell(wreq, getSelf());
                 }
             } else {
-                long elapsed = System.currentTimeMillis() - currentOp.startTime;
-                log.info("[Process-{}] [Quorum] Majority reads", processId);
-                log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, resp.value, elapsed);
+//                long elapsed = System.currentTimeMillis() - currentOp.startTime;
+//                log.info("[Process-{}] [Quorum] Majority reads", processId);
+//                log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, resp.value, elapsed);
+               
+            	
+                log.info("[Process-{}] [Quorum] Sending write requests to peers", processId);
+            	
+                WritePhaseRequest wreq = new WritePhaseRequest(currentOp.seqNum, currentOp.maxTS, currentOp.maxValue);
+                for (ActorRef p : peers) {
+                    p.tell(wreq, getSelf());
+                }
+                
+                currentOp.responseCount = 0;
                 currentOp.maxReadResponseFlag = true;
-                doNextGet();
+//                doNextGet();
 
             }
         }
@@ -225,15 +235,13 @@ public class Process extends AbstractActor {
             if (currentOp.type == Operation.Type.PUT) {
                 log.info("[Process-{}] [PUT-{}] Completed PUT(value={}) in {} ms.", processId, seqCounter, ack.value, elapsed);
                 doNextPut();
-                currentOp.responseCount = 0;
+//                currentOp.responseCount = 0;
 
             } else {
                 int val = currentOp.maxValue;
                 log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, val, elapsed);
-                currentOp.responseCount = 0;
+//                currentOp.responseCount = 0;
                 doNextGet();
-                
-
                 // doNextGetDone(val);
             }
         }

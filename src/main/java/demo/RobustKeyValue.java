@@ -15,7 +15,7 @@ public class RobustKeyValue {
         
         final ActorSystem system = ActorSystem.create("System");
 
-        int N = 5;
+        int N = 3;
         int f = 1; // up to 1 crash => f < N/2 is satisfied for N=5
 
         
@@ -47,6 +47,8 @@ public class RobustKeyValue {
         for (int i = f; i < N; i++) {
             int idx = indices.get(i);
             actors.get(idx).tell(new LaunchMessage(), ActorRef.noSender());
+            
+//            break;
             
             try {
                 TimeUnit.SECONDS.sleep(15); 
