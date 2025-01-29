@@ -1,0 +1,517 @@
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-197] [ReadPhaseRequest] Received read request from process-131 with seq=199.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-198] [ReadPhaseRequest] Received read request from process-131 with seq=199.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-131] [ReadPhaseRequest] Received read request from process-131 with seq=199.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [Process-131] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-1] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-2] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-3] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-5] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-6] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-7] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-8] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-11] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-12] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-13] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-14] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-15] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-19] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-20] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-22] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-25] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-26] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-27] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-29] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-32] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-35] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-34] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-36] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-37] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-39] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-40] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-41] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-44] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-45] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-47] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-49] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-51] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-52] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-55] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-58] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-59] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-60] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-61] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-62] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-68] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-69] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-74] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-75] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-76] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-81] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-82] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-85] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-86] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-88] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-89] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-90] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-94] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-95] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-96] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-97] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-99] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-101] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-102] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-104] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-110] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-111] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-113] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-114] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-116] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-119] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-120] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-122] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-123] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-127] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-128] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-129] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-130] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-132] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-134] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-138] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-149] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-152] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-154] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-155] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-157] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-158] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-159] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-160] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-161] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-164] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-166] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-170] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-171] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-173] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-174] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-179] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-182] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-184] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-183] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-186] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-192] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-194] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-196] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-197] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-198] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-131] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [Process-131] [GET-199] Completed GET => (value=19931) in 0 ms.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [Process-131] [GET-200] Starting GET [seq=200].
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-1] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-131] [process-2] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-13] [akka://System/user/process-131] [process-3] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-13] [akka://System/user/process-131] [process-5] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-13] [akka://System/user/process-131] [process-6] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-13] [akka://System/user/process-131] [process-7] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.010] [System-akka.actor.default-dispatcher-13] [akka://System/user/process-131] [process-8] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-131] [process-11] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-131] [process-12] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-131] [process-13] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-131] [process-14] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-131] [process-15] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-19] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-20] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-22] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-26] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-27] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-25] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-29] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-32] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-34] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-35] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-36] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-37] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-39] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-40] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-41] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-44] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-45] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-47] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-49] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-51] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-52] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-55] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-58] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-59] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-60] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-61] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-62] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-68] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-69] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-74] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-75] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-76] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-81] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-82] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-85] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-86] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-88] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-89] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-90] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-94] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-131] [process-95] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-131] [process-96] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-131] [process-97] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-131] [process-99] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-131] [process-101] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-102] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-104] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-110] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-111] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-113] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-114] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-116] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-119] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-120] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-122] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-123] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-127] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-128] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-129] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-130] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-132] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-134] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-138] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-149] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-152] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-154] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-155] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-157] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-159] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-158] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-160] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-161] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-164] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-166] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-170] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-171] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-174] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-173] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-179] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-182] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-184] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-183] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-186] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-131] [process-192] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-194] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-196] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-197] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-198] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [process-131] [ReadPhaseRequest] Received read request from process-131 with seq=200.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-131] [Process-131] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-1] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-2] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-3] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-5] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-6] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-8] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-7] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-11] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-12] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-13] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-14] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-15] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-19] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-20] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-22] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-25] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-26] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-27] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-29] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-32] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-34] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-35] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-36] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-37] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-39] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-40] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-41] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-44] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-45] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-47] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-49] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-51] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-52] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-55] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-58] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-59] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-61] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-60] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-62] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-68] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-69] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-74] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-75] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-76] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-81] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-82] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-85] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-86] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-88] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-89] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-90] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-94] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-95] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-97] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-96] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-99] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-101] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-102] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-104] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-110] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-111] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-113] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-114] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-131] [process-116] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-119] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-120] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-122] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-123] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-127] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-128] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-129] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-130] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-132] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-134] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-138] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-149] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-152] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-154] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-155] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-157] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-158] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-159] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-160] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-161] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-164] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-166] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-170] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-171] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-173] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-174] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-179] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-182] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-184] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-183] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-186] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-192] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-194] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-196] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-10] [akka://System/user/process-131] [process-198] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-197] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [process-131] [ACK] Updated local state to value=19931 with timestamp=10100.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [Process-131] [GET-200] Completed GET => (value=19931) in 2 ms.
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] process-131 finished all operations (100 puts, 100 gets).
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] [Process-131] Sending latencies to aggregator (PUT: 1.7 ms, GET: 0.45 ms).
+[INFO] [01/29/2025 04:00:46.012] [System-akka.actor.default-dispatcher-6] [akka://System/user/aggregator] [Aggregator] Received latency report (PUT: 1.7 ms, GET: 0.45 ms).
+[INFO] [01/29/2025 04:00:46.016] [System-akka.actor.default-dispatcher-6] [akka://System/user/aggregator] [Aggregator] FINAL AVERAGE LATENCIES:
+[INFO] [01/29/2025 04:00:46.029] [System-akka.actor.default-dispatcher-6] [akka://System/user/aggregator] [Aggregator] Average PUT latency: 1.19 ms
+[INFO] [01/29/2025 04:00:46.029] [System-akka.actor.default-dispatcher-6] [akka://System/user/aggregator] [Aggregator] Average GET latency: 0.75 ms
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-103] process-103 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-101] process-101 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-0] process-0 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-10] process-10 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-1] process-1 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-13] [akka://System/user/process-102] process-102 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-105] process-105 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-104] process-104 shutting down.
+[INFO] [01/29/2025 04:00:51.834] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-100] process-100 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-106] process-106 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-107] process-107 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-108] process-108 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-109] process-109 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-11] process-11 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-110] process-110 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-111] process-111 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-112] process-112 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-113] process-113 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-114] process-114 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-115] process-115 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-116] process-116 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-117] process-117 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-118] process-118 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-119] process-119 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-12] process-12 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-120] process-120 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-121] process-121 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-122] process-122 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-123] process-123 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-124] process-124 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-125] process-125 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-126] process-126 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-127] process-127 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-128] process-128 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-129] process-129 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-13] process-13 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-131] process-131 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-130] process-130 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-132] process-132 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-133] process-133 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-134] process-134 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-135] process-135 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-136] process-136 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-137] process-137 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-138] process-138 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-139] process-139 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-14] process-14 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-140] process-140 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-141] process-141 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-142] process-142 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-143] process-143 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-144] process-144 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-145] process-145 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-146] process-146 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-14] [akka://System/user/process-147] process-147 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-148] process-148 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-149] process-149 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-15] process-15 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-150] process-150 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-151] process-151 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-152] process-152 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-153] process-153 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-154] process-154 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-155] process-155 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-156] process-156 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-157] process-157 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-158] process-158 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-159] process-159 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-16] process-16 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-160] process-160 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-161] process-161 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-162] process-162 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-163] process-163 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-164] process-164 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-165] process-165 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-166] process-166 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-167] process-167 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-168] process-168 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-169] process-169 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-17] process-17 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-170] process-170 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-171] process-171 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-172] process-172 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-173] process-173 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-174] process-174 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-175] process-175 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-176] process-176 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-177] process-177 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-178] process-178 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-179] process-179 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-18] process-18 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-180] process-180 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-181] process-181 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-182] process-182 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-183] process-183 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-184] process-184 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-185] process-185 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-186] process-186 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-187] process-187 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-188] process-188 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-189] process-189 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-19] process-19 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-190] process-190 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-191] process-191 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-192] process-192 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-193] process-193 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-194] process-194 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-195] process-195 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-196] process-196 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-197] process-197 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-198] process-198 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-199] process-199 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-2] process-2 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-20] process-20 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-21] process-21 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-22] process-22 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-23] process-23 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-24] process-24 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-25] process-25 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-26] process-26 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-27] process-27 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-28] process-28 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-3] process-3 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-29] process-29 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-30] process-30 shutting down.
+[INFO] [01/29/2025 04:00:51.849] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-31] process-31 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-33] process-33 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-34] process-34 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-35] process-35 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-36] process-36 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-32] process-32 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-37] process-37 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-38] process-38 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-39] process-39 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-4] process-4 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-40] process-40 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-41] process-41 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-42] process-42 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-13] [akka://System/user/process-43] process-43 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-45] process-45 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-46] process-46 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-47] process-47 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-48] process-48 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-49] process-49 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-5] process-5 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-50] process-50 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-51] process-51 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-52] process-52 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-53] process-53 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-54] process-54 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-55] process-55 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-56] process-56 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-57] process-57 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-58] process-58 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-59] process-59 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-6] process-6 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-60] process-60 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-61] process-61 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-62] process-62 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-63] process-63 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-64] process-64 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-65] process-65 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-66] process-66 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-67] process-67 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-68] process-68 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-69] process-69 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-7] process-7 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-70] process-70 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-71] process-71 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-72] process-72 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-44] process-44 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-73] process-73 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-74] process-74 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-75] process-75 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-77] process-77 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-78] process-78 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-79] process-79 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-8] process-8 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-80] process-80 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-81] process-81 shutting down.
+[INFO] [01/29/2025 04:00:51.865] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-82] process-82 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-85] process-85 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-84] process-84 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-88] process-88 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-87] process-87 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-9] process-9 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-90] process-90 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-89] process-89 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-91] process-91 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-92] process-92 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-93] process-93 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-94] process-94 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-95] process-95 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-96] process-96 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-97] process-97 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-9] [akka://System/user/process-98] process-98 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-86] process-86 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-99] process-99 shutting down.
+[INFO] [01/29/2025 04:00:51.881] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-83] process-83 shutting down.
+[INFO] [01/29/2025 04:00:51.896] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-76] process-76 shutting down.
