@@ -1,7 +1,7 @@
 # Robust Key-Value Store
 
 ## Authors
-**Axel Berglund**
+**Axel Berglund**  
 **Phuc Lai Le**
 
 ## Overview
