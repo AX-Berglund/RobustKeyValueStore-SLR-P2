@@ -1,5 +1,9 @@
 # Robust Key-Value Store
 
+## Authors
+**Axel Berglund**
+**Phuc Lai Le**
+
 ## Overview
 This project implements a **fault-tolerant distributed key-value store** using the Akka framework. The system allows multiple processes to store and retrieve values associated with keys, ensuring data consistency and availability even when some processes fail.
 
