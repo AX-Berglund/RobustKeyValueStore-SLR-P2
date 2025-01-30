@@ -15,8 +15,11 @@ public class RobustKeyValue {
         
         final ActorSystem system = ActorSystem.create("System");
 
-        int N = 5;
-        int f = 1; // up to 1 crash => f < N/2 is satisfied for N=5
+        int N = 100;
+        int f = 49; // up to 1 crash => f < N/2 is satisfied for N=5
+
+        //Aggregator actor to calculate average latency
+        ActorRef aggregator = system.actorOf(Aggregator.createActor((N / 2) + 1), "aggregator");
 
         
         // We'll do a separate list for the final references
@@ -24,7 +27,7 @@ public class RobustKeyValue {
 
         // We'll first create them with an empty list
         for (int i = 0; i < N; i++) {
-            actors.add(system.actorOf(Process.createActor(new ArrayList<>()), "process-" + i));
+            actors.add(system.actorOf(Process.createActor(new ArrayList<>(), aggregator), "process-" + i));
         }
         // Now we have all actors. We'll pass that same list to each constructor via a special "InitPeersMessage" 
         // So we do an init message:
@@ -42,22 +45,24 @@ public class RobustKeyValue {
             int crashIdx = indices.get(i);
             actors.get(crashIdx).tell(new CrashMessage(), ActorRef.noSender());
         }
-
+        
         // The rest are correct (greater than f) => send them a LaunchMessage
         for (int i = f; i < N; i++) {
             int idx = indices.get(i);
             actors.get(idx).tell(new LaunchMessage(), ActorRef.noSender());
             
+//            break;
+            
             try {
-                TimeUnit.SECONDS.sleep(15); 
+                TimeUnit.SECONDS.sleep(5); 
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt(); 
             }
         }
 
-        // Let them run for some time
+        //Let them run for some time
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {

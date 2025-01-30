@@ -1,0 +1,102 @@
+[INFO] [01/29/2025 03:11:24.651] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [Process-0] [Init] Initialized with N=3 peers, quorum=2
+[INFO] [01/29/2025 03:11:24.651] [System-akka.actor.default-dispatcher-5] [akka://System/user/process-1] [Process-1] [Init] Initialized with N=3 peers, quorum=2
+[INFO] [01/29/2025 03:11:24.651] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-2] [Process-2] [Init] Initialized with N=3 peers, quorum=2
+[INFO] [01/29/2025 03:11:24.651] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [Process-0] [Launch] Process launching with 3 PUTs and 3 GETs.
+[INFO] [01/29/2025 03:11:24.651] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-2] [Process-2] [Crash] Will not react to further messages.
+[INFO] [01/29/2025 03:11:24.654] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [Process-0] [PUT-1] Starting PUT(value=0) [seq=1].
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [process-0] [ReadPhaseRequest] Received read request from process-0 with seq=1.
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [process-1] [ReadPhaseRequest] Received read request from process-0 with seq=1.
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [Process-0] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [process-1] [ACK] Updated local state to value=0 with timestamp=1.
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [process-0] [ACK] Updated local state to value=0 with timestamp=1.
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [Process-0] [PUT-1] Completed PUT(value=0) in 1 ms.
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [Process-0] [PUT-2] Starting PUT(value=3) [seq=2].
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-2] [akka://System/user/process-0] [process-1] [ReadPhaseRequest] Received read request from process-0 with seq=2.
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-0] [process-0] [ReadPhaseRequest] Received read request from process-0 with seq=2.
+[INFO] [01/29/2025 03:11:24.655] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-0] [Process-0] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-0] [process-1] [ACK] Updated local state to value=3 with timestamp=2.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-0] [process-0] [ACK] Updated local state to value=3 with timestamp=2.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-0] [Process-0] [PUT-2] Completed PUT(value=3) in 1 ms.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-4] [akka://System/user/process-0] [Process-0] [PUT-3] Starting PUT(value=6) [seq=3].
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-0] [ReadPhaseRequest] Received read request from process-0 with seq=3.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-1] [ReadPhaseRequest] Received read request from process-0 with seq=3.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [Process-0] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-1] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-0] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [Process-0] [PUT-3] Completed PUT(value=6) in 0 ms.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [Process-0] [GET-4] Starting GET [seq=4].
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-1] [ReadPhaseRequest] Received read request from process-0 with seq=4.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-0] [ReadPhaseRequest] Received read request from process-0 with seq=4.
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [Process-0] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:24.656] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-0] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.657] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-1] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.657] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [Process-0] [GET-4] Completed GET => (value=6) in 1 ms.
+[INFO] [01/29/2025 03:11:24.657] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [Process-0] [GET-5] Starting GET [seq=5].
+[INFO] [01/29/2025 03:11:24.657] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-0] [ReadPhaseRequest] Received read request from process-0 with seq=5.
+[INFO] [01/29/2025 03:11:24.657] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-1] [ReadPhaseRequest] Received read request from process-0 with seq=5.
+[INFO] [01/29/2025 03:11:24.657] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [Process-0] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:24.657] [System-akka.actor.default-dispatcher-6] [akka://System/user/process-0] [process-0] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.658] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [process-1] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.658] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [Process-0] [GET-5] Completed GET => (value=6) in 1 ms.
+[INFO] [01/29/2025 03:11:24.658] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [Process-0] [GET-6] Starting GET [seq=6].
+[INFO] [01/29/2025 03:11:24.658] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [process-0] [ReadPhaseRequest] Received read request from process-0 with seq=6.
+[INFO] [01/29/2025 03:11:24.659] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [process-1] [ReadPhaseRequest] Received read request from process-0 with seq=6.
+[INFO] [01/29/2025 03:11:24.659] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [Process-0] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:24.659] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [process-0] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.659] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [process-1] [ACK] Updated local state to value=6 with timestamp=3.
+[INFO] [01/29/2025 03:11:24.659] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [Process-0] [GET-6] Completed GET => (value=6) in 1 ms.
+[INFO] [01/29/2025 03:11:24.659] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] process-0 finished all operations (3 puts, 3 gets).
+[INFO] [01/29/2025 03:11:24.668] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-0] [Process-0] Sending latencies to aggregator (PUT: 0.6666666666666666 ms, GET: 1.0 ms).
+[INFO] [01/29/2025 03:11:24.668] [System-akka.actor.default-dispatcher-12] [akka://System/user/aggregator] [Aggregator] Received latency report (PUT: 0.6666666666666666 ms, GET: 1.0 ms).
+[INFO] [01/29/2025 03:11:29.647] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-1] [Process-1] [Launch] Process launching with 3 PUTs and 3 GETs.
+[INFO] [01/29/2025 03:11:29.647] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-1] [Process-1] [PUT-1] Starting PUT(value=1) [seq=1].
+[INFO] [01/29/2025 03:11:29.647] [System-akka.actor.default-dispatcher-3] [akka://System/user/process-1] [process-1] [ReadPhaseRequest] Received read request from process-1 with seq=1.
+[INFO] [01/29/2025 03:11:29.649] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-1] [process-0] [ReadPhaseRequest] Received read request from process-1 with seq=1.
+[INFO] [01/29/2025 03:11:29.649] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-1] [Process-1] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:29.650] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-1] [process-1] [ACK] Updated local state to value=1 with timestamp=4.
+[INFO] [01/29/2025 03:11:29.650] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-1] [process-0] [ACK] Updated local state to value=1 with timestamp=4.
+[INFO] [01/29/2025 03:11:29.650] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-1] [Process-1] [PUT-1] Completed PUT(value=1) in 3 ms.
+[INFO] [01/29/2025 03:11:29.650] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-1] [Process-1] [PUT-2] Starting PUT(value=4) [seq=2].
+[INFO] [01/29/2025 03:11:29.652] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-1] [process-1] [ReadPhaseRequest] Received read request from process-1 with seq=2.
+[INFO] [01/29/2025 03:11:29.653] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-1] [process-0] [ReadPhaseRequest] Received read request from process-1 with seq=2.
+[INFO] [01/29/2025 03:11:29.653] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-1] [Process-1] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:29.653] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-1] [process-1] [ACK] Updated local state to value=4 with timestamp=5.
+[INFO] [01/29/2025 03:11:29.653] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ACK] Updated local state to value=4 with timestamp=5.
+[INFO] [01/29/2025 03:11:29.653] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [PUT-2] Completed PUT(value=4) in 3 ms.
+[INFO] [01/29/2025 03:11:29.653] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [PUT-3] Starting PUT(value=7) [seq=3].
+[INFO] [01/29/2025 03:11:29.653] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ReadPhaseRequest] Received read request from process-1 with seq=3.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ReadPhaseRequest] Received read request from process-1 with seq=3.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [PUT-3] Completed PUT(value=7) in 1 ms.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [GET-4] Starting GET [seq=4].
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ReadPhaseRequest] Received read request from process-1 with seq=4.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ReadPhaseRequest] Received read request from process-1 with seq=4.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [GET-4] Completed GET => (value=7) in 0 ms.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [GET-5] Starting GET [seq=5].
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ReadPhaseRequest] Received read request from process-1 with seq=5.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ReadPhaseRequest] Received read request from process-1 with seq=5.
+[INFO] [01/29/2025 03:11:29.654] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [GET-5] Completed GET => (value=7) in 1 ms.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [GET-6] Starting GET [seq=6].
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ReadPhaseRequest] Received read request from process-1 with seq=6.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ReadPhaseRequest] Received read request from process-1 with seq=6.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [Quorum] Sending write requests to peers
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-1] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [process-0] [ACK] Updated local state to value=7 with timestamp=6.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] [GET-6] Completed GET => (value=7) in 0 ms.
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] process-1 finished all operations (3 puts, 3 gets).
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/process-1] [Process-1] Sending latencies to aggregator (PUT: 2.3333333333333335 ms, GET: 0.3333333333333333 ms).
+[INFO] [01/29/2025 03:11:29.655] [System-akka.actor.default-dispatcher-11] [akka://System/user/aggregator] [Aggregator] Received latency report (PUT: 2.3333333333333335 ms, GET: 0.3333333333333333 ms).
+[INFO] [01/29/2025 03:11:29.665] [System-akka.actor.default-dispatcher-11] [akka://System/user/aggregator] [Aggregator] FINAL AVERAGE LATENCIES:
+[INFO] [01/29/2025 03:11:29.677] [System-akka.actor.default-dispatcher-11] [akka://System/user/aggregator] [Aggregator] Average PUT latency: 1.50 ms
+[INFO] [01/29/2025 03:11:29.677] [System-akka.actor.default-dispatcher-11] [akka://System/user/aggregator] [Aggregator] Average GET latency: 0.67 ms
+[INFO] [01/29/2025 03:11:39.673] [System-akka.actor.default-dispatcher-7] [akka://System/user/process-1] process-1 shutting down.
+[INFO] [01/29/2025 03:11:39.673] [System-akka.actor.default-dispatcher-12] [akka://System/user/process-2] process-2 shutting down.
+[INFO] [01/29/2025 03:11:39.673] [System-akka.actor.default-dispatcher-8] [akka://System/user/process-0] process-0 shutting down.

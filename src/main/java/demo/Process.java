@@ -14,6 +14,15 @@ import demo.ABDMessages.WritePhaseAck;
 import demo.ABDMessages.WritePhaseRequest;
 
 public class Process extends AbstractActor {
+	
+	//LAI To calculate the average latency of PUT and GET
+	private List<Long> putLatencies = new ArrayList<>();
+	private List<Long> getLatencies = new ArrayList<>();
+	private ActorRef aggregator; // Reference to the aggregator process
+	
+
+	
+	
     private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
 
     // Crash flag
@@ -62,24 +71,28 @@ public class Process extends AbstractActor {
     private final String processName;
 
     // For the sequential M puts + M gets scenario
-    private static final int M = 3;
+    private static final int M = 200;
     private int putCount = 0;
     private int getCount = 0;
 
 
 
-    public Process(List<ActorRef> initialPeers) {
+    public Process(List<ActorRef> initialPeers, ActorRef aggregator) {
         // We'll set peers after we get an InitPeersMessage, 
         // but let's store what we have for now if any.
         this.peers = initialPeers;
         this.processName = getSelf().path().name(); // get the name of the actor
         String[] tokens = processName.split("-");
         this.processId = Integer.parseInt(tokens[tokens.length - 1]);
+        
+        //LAI
+        this.aggregator = aggregator; // Store reference to aggregator
+        
     }
 
     // This 
-    public static Props createActor(List<ActorRef> peers) {
-        return Props.create(Process.class, () -> new Process(peers));
+    public static Props createActor(List<ActorRef> peers,  ActorRef aggregator) {
+        return Props.create(Process.class, () -> new Process(peers, aggregator));
     }
 
     @Override
@@ -181,11 +194,21 @@ public class Process extends AbstractActor {
                     p.tell(wreq, getSelf());
                 }
             } else {
-                long elapsed = System.currentTimeMillis() - currentOp.startTime;
-                log.info("[Process-{}] [Quorum] Majority reads", processId);
-                log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, resp.value, elapsed);
+//                long elapsed = System.currentTimeMillis() - currentOp.startTime;
+//                log.info("[Process-{}] [Quorum] Majority reads", processId);
+//                log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, resp.value, elapsed);
+               
+            	
+                log.info("[Process-{}] [Quorum] Sending write requests to peers", processId);
+            	
+                WritePhaseRequest wreq = new WritePhaseRequest(currentOp.seqNum, currentOp.maxTS, currentOp.maxValue);
+                for (ActorRef p : peers) {
+                    p.tell(wreq, getSelf());
+                }
+                
+                currentOp.responseCount = 0;
                 currentOp.maxReadResponseFlag = true;
-                doNextGet();
+//                doNextGet();
 
             }
         }
@@ -223,17 +246,17 @@ public class Process extends AbstractActor {
             // operation done
             long elapsed = System.currentTimeMillis() - currentOp.startTime;
             if (currentOp.type == Operation.Type.PUT) {
+            	putLatencies.add(elapsed);
                 log.info("[Process-{}] [PUT-{}] Completed PUT(value={}) in {} ms.", processId, seqCounter, ack.value, elapsed);
                 doNextPut();
-                currentOp.responseCount = 0;
+//                currentOp.responseCount = 0;
 
             } else {
+            	getLatencies.add(elapsed);
                 int val = currentOp.maxValue;
                 log.info("[Process-{}] [GET-{}] Completed GET => (value={}) in {} ms.", processId, seqCounter, val, elapsed);
-                currentOp.responseCount = 0;
                 doNextGet();
-                
-
+//              currentOp.responseCount = 0;
                 // doNextGetDone(val);
             }
         }
@@ -262,6 +285,8 @@ public class Process extends AbstractActor {
         } else {
             
             log.info("{} finished all operations ({} puts, {} gets).", processName, M, M);
+            
+            sendLatenciesToAggregator();
         }
     }
 
@@ -306,4 +331,16 @@ public class Process extends AbstractActor {
             p.tell(rreq, getSelf());
         }
     }
+    
+    private void sendLatenciesToAggregator() {
+        double avgPutLatency = putLatencies.stream().mapToLong(Long::longValue).average().orElse(0.0);
+        double avgGetLatency = getLatencies.stream().mapToLong(Long::longValue).average().orElse(0.0);
+
+        log.info("[Process-{}] Sending latencies to aggregator (PUT: {} ms, GET: {} ms).", 
+            processId, avgPutLatency, avgGetLatency);
+
+        aggregator.tell(new LatencyReportMessage(avgPutLatency, avgGetLatency), getSelf());
+    }
+
+
 }
