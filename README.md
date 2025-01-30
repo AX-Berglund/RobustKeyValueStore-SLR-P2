@@ -24,15 +24,6 @@ This project implements a **fault-tolerant distributed key-value store** using t
 3. **Crash Simulation**:
    - Processes randomly crash during testing, simulating real-world failures.
 
-## Project Structure
-- **`Process`**: Actor class implementing the key-value store logic.
-- **Messages**:
-  - `PutMessage`: Contains key, value, and timestamp for updates.
-  - `GetMessage`: Requests a value for a key.
-  - `CrashMessage`: Simulates a process crash.
-  - `LaunchMessage`: Initiates process operations.
-- **ValueResponse**: Encapsulates the response to `get` requests.
-
 ## Running the System
 1. **Setup**:
    - Ensure you have Java 8+ and the Akka framework installed.
